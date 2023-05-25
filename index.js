@@ -7,15 +7,26 @@ function calculateAge() {
     var selectedDate = new Date(dob);
     var age = currentDate.getFullYear() - selectedDate.getFullYear();
     
-    
-    // Check if the birthday hasn't occurred yet this year
-    if (currentDate.getMonth() < selectedDate.getMonth() || 
-        (currentDate.getMonth() === selectedDate.getMonth() && 
-        currentDate.getDate() < selectedDate.getDate())) {
-      age--;
+    if(name == "" || lastName == "" ||dob == "")
+    {
+        alert("Please fill the input");
+
     }
     
-    document.getElementById("result").innerHTML = " Hi my name is " + name+ " " +lastName+ " Age is " +age+ " year";
+    // Check if the birthday hasn't occurred yet this year
+     
+    else if (currentDate.getMonth() < selectedDate.getMonth() || 
+        (currentDate.getMonth() === selectedDate.getMonth() && 
+        currentDate.getDate() < selectedDate.getDate())) 
+        {
+          age--;
+        }
+
+    else
+    {
+        document.getElementById("result").innerHTML = " Hi my name is " + name+ " " +lastName+ " Age is " +age+ " year";
+    }
+    
     
 
     

@@ -15,7 +15,7 @@ function calculateAge() {
       age--;
     }
     
-    document.getElementById("result").innerHTML = " Hi my name is " + name+ " " +lastName+ " Age is " +age;
+    document.getElementById("result").innerHTML = " Hi my name is " + name+ " " +lastName+ " Age is " +age+ " year";
     
 
     
